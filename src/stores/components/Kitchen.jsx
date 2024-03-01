@@ -1,0 +1,22 @@
+import React from 'react'
+import {kitchenData} from "../data/kitchen"
+
+const Kitchen = () => {
+    const firstFiveImages = kitchenData.slice(0, 5);
+    return (
+      <>
+        <h2>Mens Wear</h2>
+        <div className="proSection">
+          {firstFiveImages.map((item) => {
+            return (
+              <div className="imgbox">
+                <img className="proImage" src={item.image} />
+              </div>
+            );
+          })}
+        </div>
+      </>
+    );
+}
+
+export default Kitchen
